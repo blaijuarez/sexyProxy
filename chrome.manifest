@@ -1,0 +1,3 @@
+content sexyProxy sexyProxy/content/
+overlay chrome://uedit/content/uedit.xul chrome://sexyProxy/content/overlay.xul
+style chrome://uedit/content/uedit.xul chrome://sexyProxy/content/style.css

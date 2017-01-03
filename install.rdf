@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>sexyProxy@uedit.org</em:id>
+    <em:version>0.1.0</em:version>
+   
+    <em:targetApplication>
+      <!-- uedit -->
+      <Description>
+        <em:id>{uedit@el-mundo.net}</em:id>
+        <em:minVersion>0.1.0</em:minVersion>
+        <em:maxVersion>8.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <!-- Front End MetaData -->
+    <em:name>sexyProxy</em:name>
+    <em:description>Add a button in UEdit to enable or disable proxy</em:description>
+    <em:creator>UEdit Team</em:creator>
+    <em:updateURL>https://raw.githubusercontent.com/blaijuarez/sexyProxy/master/update.rdf</em:updateURL>
+
+  </Description>
+</RDF>
