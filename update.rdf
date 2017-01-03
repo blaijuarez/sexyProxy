@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+    <!-- This Description resource includes all the update and compatibility information for
+         a single add-on with the id foobar@developer.mozilla.org. You can list multiple
+         add-ons information in the same RDF file. -->
+    <RDF:Description about="urn:mozilla:extension:sexyProxy@uedit.org">
+        <em:updates>
+            <RDF:Seq>
+
+                <!-- Each li is a different version of the same add-on -->
+                <RDF:li>
+                    <RDF:Description>
+                        <em:version>0.1.1</em:version> <!-- This is the version number of the add-on -->
+
+                        <!-- One targetApplication for each application the add-on is compatible with -->
+                        <em:targetApplication>
+                            <RDF:Description>
+                                <em:id>{uedit@el-mundo.net}</em:id>
+                                <em:minVersion>0.1.0</em:minVersion>
+                                <em:maxVersion>8.0.*</em:maxVersion>
+
+                                <!-- This is where this version of the add-on will be downloaded from -->
+                                <em:updateLink>https://raw.githubusercontent.com/blaijuarez/sexyProxy/master/dist/sexyProxy0.1.1.xpi</em:updateLink>
+
+                                <!-- A page describing what is new in this updated version -->
+                                <em:updateInfoURL>https://github.com/blaijuarez/sexyProxy/Wiki/changelog</em:updateInfoURL>
+                            </RDF:Description>
+                        </em:targetApplication>
+                    </RDF:Description>
+                </RDF:li>
+
+            </RDF:Seq>
+        </em:updates>
+
+    </RDF:Description>
+</RDF:RDF>

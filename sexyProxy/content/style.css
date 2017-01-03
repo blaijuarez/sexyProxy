@@ -1,0 +1,21 @@
+
+.sexyProxy-button {
+    -moz-appearance:none;
+    color: #666;
+    background-color:#e6e6e6;
+    background: url("chrome://sexyProxy/content/off.png") 5px 50%;
+    background-repeat:no-repeat;
+    padding:0px 3px 0px 5px;
+    cursor:pointer;
+    border-radius:4px;
+    border:1px solid #cdcdcd;
+    margin-right:4px;
+}
+.sexyProxy-button.active {
+    color: #2c2c2c;
+    background: url("chrome://sexyProxy/content/on.png") 5px 50%;
+    background-repeat:no-repeat;
+}
+.sexyProxy-button:hover {
+    background-color:#f3f3f3;
+}

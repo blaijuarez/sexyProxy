@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://sexyProxy/locale/sexyProxy.dtd" >
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" id="overlay-sexyProxy">
+
+    <menubar id="principal_menubar">
+        <button id="sexyProxyButton" class="sexyProxy-button" label="Proxy" oncommand="sexyProxy();"/>
+    </menubar>
+
+    <script type="text/javascript">
+        function sexyProxy() {
+            var sexyProxyButton = document.getElementById('sexyProxyButton');
+            var state = Utils.Pref.getPref('network.proxy.type') ? 0 : 1;
+            Utils.Pref.setPref('network.proxy.type', state);
+            switch (state) {
+                case 0:
+                    sexyProxyButton.classList.remove('active');
+                    break;
+                default:
+                    sexyProxyButton.classList.add('active');
+            }
+        }
+        function checkSexyProxy() {
+            var sexyProxyButton = document.getElementById('sexyProxyButton');
+            var state = Utils.Pref.getPref('network.proxy.type');
+            if (state==1) {
+                sexyProxyButton.classList.add('active');
+            }
+        }
+        window.addEventListener("load", function loadSexyProxy(e) {
+            window.removeEventListener("load", loadSexyProxy, false);
+            checkSexyProxy();
+        },false);
+    </script>
+</overlay>
