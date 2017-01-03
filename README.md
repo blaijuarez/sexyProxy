@@ -1,0 +1,2 @@
+# sexyProxy
+Mozilla extension
