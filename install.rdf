@@ -10,7 +10,7 @@
       <!-- uedit -->
       <Description>
         <em:id>{uedit@el-mundo.net}</em:id>
-        <em:minVersion>0.1.0</em:minVersion>
+        <em:minVersion>0.1.2</em:minVersion>
         <em:maxVersion>8.0</em:maxVersion>
       </Description>
     </em:targetApplication>
